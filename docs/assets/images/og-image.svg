@@ -42,19 +42,24 @@
 
     <rect x="464" width="168" height="88" rx="16" fill="#ffffff" stroke="#c9d6d2"/>
     <text x="548" y="38" text-anchor="middle" fill="#0e7490" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="16" font-weight="700">Catalog</text>
-    <text x="548" y="62" text-anchor="middle" fill="#3d5560" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="14">RDS / FDSNWS</text>
+    <text x="548" y="62" text-anchor="middle" fill="#3d5560" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="14">RDS / EFS / FDSNWS</text>
   </g>
 
   <g transform="translate(760 118)">
     <rect width="368" height="394" rx="28" fill="#ffffff" stroke="#c9d6d2"/>
-    <rect x="28" y="28" width="312" height="72" rx="14" fill="none" stroke="#0e7490" stroke-width="3"/>
-    <text x="184" y="72" text-anchor="middle" fill="#0e7490" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="18" font-weight="700">seedlink</text>
-    <rect x="28" y="116" width="312" height="72" rx="14" fill="none" stroke="#0e7490" stroke-width="3"/>
-    <text x="184" y="160" text-anchor="middle" fill="#0e7490" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="18" font-weight="700">scmaster</text>
-    <rect x="28" y="204" width="312" height="72" rx="14" fill="#0e7490"/>
-    <text x="184" y="248" text-anchor="middle" fill="#f5fffd" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="18" font-weight="700">gui / xrdp</text>
-    <text x="184" y="312" text-anchor="middle" fill="#0b1c24" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="20" font-weight="700">gsm in the image</text>
-    <text x="184" y="348" text-anchor="middle" fill="#3d5560" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="16">not a source compile</text>
-    <text x="184" y="382" text-anchor="middle" fill="#0e7490" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="15" font-weight="700">unofficial experiment</text>
+    <text x="184" y="48" text-anchor="middle" fill="#5b7380" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="0.06em">ECS FARGATE</text>
+    <rect x="28" y="64" width="148" height="56" rx="12" fill="none" stroke="#0e7490" stroke-width="2.5"/>
+    <text x="102" y="98" text-anchor="middle" fill="#0e7490" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="15" font-weight="700">seedlink</text>
+    <rect x="192" y="64" width="148" height="56" rx="12" fill="none" stroke="#0e7490" stroke-width="2.5"/>
+    <text x="266" y="98" text-anchor="middle" fill="#0e7490" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="15" font-weight="700">scmaster</text>
+    <rect x="28" y="136" width="148" height="56" rx="12" fill="none" stroke="#0e7490" stroke-width="2.5"/>
+    <text x="102" y="170" text-anchor="middle" fill="#0e7490" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="15" font-weight="700">slarchive</text>
+    <rect x="192" y="136" width="148" height="56" rx="12" fill="none" stroke="#0e7490" stroke-width="2.5"/>
+    <text x="266" y="170" text-anchor="middle" fill="#0e7490" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="15" font-weight="700">fdsnws</text>
+    <rect x="28" y="208" width="312" height="56" rx="12" fill="#0e7490"/>
+    <text x="184" y="242" text-anchor="middle" fill="#f5fffd" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="16" font-weight="700">EC2 GUI / xrdp</text>
+    <text x="184" y="300" text-anchor="middle" fill="#0b1c24" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="18" font-weight="700">RDS + EFS, not Compose</text>
+    <text x="184" y="334" text-anchor="middle" fill="#3d5560" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="15">GHCR gsm images</text>
+    <text x="184" y="368" text-anchor="middle" fill="#0e7490" font-family="Noto Sans, Liberation Sans, sans-serif" font-size="14" font-weight="700">unofficial experiment</text>
   </g>
 </svg>
