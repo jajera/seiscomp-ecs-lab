@@ -1,0 +1,38 @@
+# Terraform (HashiCorp defaults, lab lives under aws/ecs/)
+**/.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+tfplan
+*.tfplan
+
+# Variable files often hold operator CIDR and other local values
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+!*.tfvars.example
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+*.swp
+*~
+*.tar.gz
+
+# Jekyll (also listed in docs/.gitignore)
+docs/_site/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
+docs/.sass-cache/
+docs/vendor/

@@ -1,0 +1,13 @@
+# Copy to terraform.tfvars and set operator_cidr.
+# Do not commit terraform.tfvars.
+
+profile       = "sandbox"
+region        = "ap-southeast-2"
+operator_cidr = "1.2.3.4/32"
+image_tag     = "latest"
+# Station feed (defaults are LEARN GEOFON BH: WLF STU MORC RGN):
+# seedlink_upstream_host = "geofon.gfz.de"
+# seedlink_network       = "GE"
+# seedlink_stations      = "WLF,STU,MORC,RGN"
+# seedlink_selectors     = "BH?.D"
+# inventory_fdsn_base    = "https://geofon.gfz.de/fdsnws/station/1/query"

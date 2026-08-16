@@ -1,0 +1,79 @@
+{% assign aws = "https://jajera.github.io/aws-icons" %}
+{% assign arch = "https://jajera.github.io/arch-icons" %}
+<figure class="arch-diagram">
+  <p class="arch-diagram__title">Data path</p>
+  <div class="arch-flow">
+    <div class="arch-cluster">
+      <div class="arch-cluster__head">
+        <img src="{{ aws }}/icons/resource/general/Res_Globe_48_Light.svg" alt="" width="20" height="20">
+        Upstream
+      </div>
+      <div class="arch-nodes">
+        <div class="arch-node">
+          <img src="{{ aws }}/icons/resource/general/Res_Globe_48_Light.svg" alt="" width="40" height="40">
+          <span>GEOFON</span>
+        </div>
+      </div>
+    </div>
+    <div class="arch-arrow">NAT egress</div>
+    <div class="arch-cluster">
+      <div class="arch-cluster__head">
+        <img src="{{ aws }}/icons/service/containers/Arch_AWS-Fargate_64.svg" alt="" width="20" height="20">
+        ECS Fargate private
+      </div>
+      <div class="arch-nodes">
+        <div class="arch-node">
+          <img src="{{ arch }}/icons/docker/docker-mark-ocean-blue.svg" alt="" width="40" height="40">
+          <span>seedlink</span>
+        </div>
+        <div class="arch-node">
+          <img src="{{ arch }}/icons/docker/docker-mark-ocean-blue.svg" alt="" width="40" height="40">
+          <span>slarchive</span>
+        </div>
+        <div class="arch-node">
+          <img src="{{ arch }}/icons/docker/docker-mark-ocean-blue.svg" alt="" width="40" height="40">
+          <span>processors</span>
+        </div>
+        <div class="arch-node">
+          <img src="{{ arch }}/icons/docker/docker-mark-ocean-blue.svg" alt="" width="40" height="40">
+          <span>scmaster</span>
+        </div>
+        <div class="arch-node">
+          <img src="{{ arch }}/icons/docker/docker-mark-ocean-blue.svg" alt="" width="40" height="40">
+          <span>fdsnws</span>
+        </div>
+      </div>
+    </div>
+    <div class="arch-arrow">SDS / catalog / traces</div>
+    <div class="arch-cluster">
+      <div class="arch-cluster__head">
+        <img src="{{ aws }}/icons/group/networking/Private-subnet_32.svg" alt="" width="20" height="20">
+        Storage and GUI
+      </div>
+      <div class="arch-nodes">
+        <div class="arch-node">
+          <img src="{{ aws }}/icons/service/storage/Arch_Amazon-EFS_64.svg" alt="" width="40" height="40">
+          <span>EFS SDS</span>
+        </div>
+        <div class="arch-node">
+          <img src="{{ aws }}/icons/service/database/Arch_Amazon-RDS_64.svg" alt="" width="40" height="40">
+          <span>RDS MariaDB</span>
+        </div>
+        <div class="arch-node">
+          <img src="{{ aws }}/icons/service/compute/Arch_Amazon-EC2_64.svg" alt="" width="40" height="40">
+          <span>GUI EC2</span>
+        </div>
+        <div class="arch-node">
+          <img src="{{ arch }}/icons/ubuntu/Logo-ubuntu_cof-orange-hex.svg" alt="" width="40" height="40">
+          <span>xrdp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="arch-caption">
+    seedlink writes slarchive to EFS. scmaster and fdsnws use RDS. GUI reads SeedLink and scmaster.
+    Icons:
+    <a href="https://jajera.github.io/aws-icons/">AWS Icons</a>,
+    <a href="https://jajera.github.io/arch-icons/">Arch Icons</a>.
+  </p>
+</figure>
