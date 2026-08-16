@@ -1,0 +1,100 @@
+{% assign aws = "https://jajera.github.io/aws-icons" %}
+<figure class="arch-diagram">
+  <p class="arch-diagram__title">Network</p>
+  <div class="arch-stack">
+    <div class="arch-flow">
+      <div class="arch-cluster">
+        <div class="arch-cluster__head">
+          <img src="{{ aws }}/icons/resource/general/Res_User_48_Light.svg" alt="" width="20" height="20">
+          Operator
+        </div>
+        <div class="arch-nodes">
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/resource/general/Res_Client_48_Light.svg" alt="" width="40" height="40">
+            <span>Your IP</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-arrow">RDP 3389</div>
+      <div class="arch-cluster">
+        <div class="arch-cluster__head">
+          <img src="{{ aws }}/icons/group/networking/Public-subnet_32.svg" alt="" width="20" height="20">
+          Public subnets
+        </div>
+        <div class="arch-nodes">
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/resource/networking/Res_Amazon-VPC_NAT-Gateway_48.svg" alt="" width="40" height="40">
+            <span>NAT Gateway</span>
+          </div>
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/service/compute/Arch_Amazon-EC2_64.svg" alt="" width="40" height="40">
+            <span>GUI EC2</span>
+          </div>
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/resource/compute/Res_Amazon-EC2_Elastic-IP-Address_48.svg" alt="" width="40" height="40">
+            <span>Elastic IP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="arch-flow">
+      <div class="arch-cluster">
+        <div class="arch-cluster__head">
+          <img src="{{ aws }}/icons/group/networking/Private-subnet_32.svg" alt="" width="20" height="20">
+          Private app subnets
+        </div>
+        <div class="arch-nodes">
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/service/containers/Arch_AWS-Fargate_64.svg" alt="" width="40" height="40">
+            <span>Fargate tasks</span>
+          </div>
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/service/storage/Arch_Amazon-EFS_64.svg" alt="" width="40" height="40">
+            <span>EFS mounts</span>
+          </div>
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/resource/networking/Res_Amazon-VPC_Endpoints_48.svg" alt="" width="40" height="40">
+            <span>VPC endpoints</span>
+          </div>
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/service/containers/Arch_Amazon-Elastic-Container-Registry_64.svg" alt="" width="40" height="40">
+            <span>ECR</span>
+          </div>
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/service/storage/Arch_Amazon-Simple-Storage-Service_64.svg" alt="" width="40" height="40">
+            <span>S3</span>
+          </div>
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/service/management/Arch_Amazon-CloudWatch_64.svg" alt="" width="40" height="40">
+            <span>Logs</span>
+          </div>
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/service/management/Arch_AWS-Systems-Manager_64.svg" alt="" width="40" height="40">
+            <span>SSM</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-arrow">no NAT</div>
+      <div class="arch-cluster">
+        <div class="arch-cluster__head">
+          <img src="{{ aws }}/icons/group/networking/Private-subnet_32.svg" alt="" width="20" height="20">
+          Private db subnets
+        </div>
+        <div class="arch-nodes">
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/service/database/Arch_Amazon-RDS_64.svg" alt="" width="40" height="40">
+            <span>RDS MariaDB</span>
+          </div>
+          <div class="arch-node">
+            <img src="{{ aws }}/icons/resource/database/Res_Amazon-Aurora-MariaDB-Instance_48.svg" alt="" width="40" height="40">
+            <span>MariaDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="arch-caption">
+    Fargate uses NAT for GEOFON and VPC endpoints for AWS APIs. GUI has the only public inbound (RDP).
+    Icons: <a href="https://jajera.github.io/aws-icons/">AWS Icons</a>.
+  </p>
+</figure>

@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "redhat.vscode-yaml",
+    "github.vscode-github-actions",
+    "hashicorp.terraform",
+    "ms-azuretools.vscode-docker",
+    "timonwong.shellcheck"
+  ]
+}

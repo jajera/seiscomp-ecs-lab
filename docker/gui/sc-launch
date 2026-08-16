@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+export SEISCOMP_ROOT=/home/sysop/seiscomp
+export PATH="$SEISCOMP_ROOT/bin:$PATH"
+export LD_LIBRARY_PATH="$SEISCOMP_ROOT/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export PYTHONPATH="$SEISCOMP_ROOT/lib/python${PYTHONPATH:+:$PYTHONPATH}"
+export QT_QPA_PLATFORM=xcb
+cd "$HOME"
+bin="$1"
+shift
+# Unique messaging name. There is no --client-name CLI in 7.3.1.
+mkdir -p "$HOME/.seiscomp"
+cfg="$HOME/.seiscomp/${bin}.cfg"
+name="${bin}gui$$"
+if [ -f "$cfg" ]; then
+  grep -v '^connection.clientName' "$cfg" >"${cfg}.tmp" || true
+  mv "${cfg}.tmp" "$cfg"
+fi
+printf 'connection.clientName = %s\n' "$name" >>"$cfg"
+exec "$SEISCOMP_ROOT/bin/$bin" "$@"
