@@ -6,7 +6,7 @@ compile.
 
 This is **not** gempa-supported.
 
-Docs: [jajera.github.io/seiscomp-ecs-lab](https://jajera.github.io/seiscomp-ecs-lab/)
+Docs: [jajera.github.io/seiscomp-ecs-lab](https://seiscomp-ecs-lab.johna.kiwi/)
 
 | | |
 |---|---|
