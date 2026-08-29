@@ -4,8 +4,8 @@ description: >-
 
 theme: just-the-docs
 
-url: https://jajera.github.io
-baseurl: /seiscomp-ecs-lab
+url: https://seiscomp-ecs-lab.johna.kiwi
+baseurl: ""
 
 permalink: pretty
 
