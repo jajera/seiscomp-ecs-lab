@@ -2,6 +2,8 @@ title: SeisComP ECS lab
 description: >-
   Unofficial LEARN SeisComP lab on ECS Fargate with RDS, EFS, and an EC2 GUI.
 
+ga_tracking: G-6GP64SX615
+
 theme: just-the-docs
 
 url: https://seiscomp-ecs-lab.johna.kiwi
